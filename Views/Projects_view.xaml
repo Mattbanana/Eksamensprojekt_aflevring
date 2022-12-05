@@ -67,7 +67,7 @@
         <Button x:Name="edit_project_detail_button" 
                 Content="Edit details" 
                 Grid.Column="4" 
-                Grid.Row="3" 
+                Grid.Row="5" 
                 Margin="5" 
                 />
 
