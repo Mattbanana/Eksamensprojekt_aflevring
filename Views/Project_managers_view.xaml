@@ -7,6 +7,95 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid Background="BlueViolet">
-            
+        <!-- Dynamisk grid så man kan ændre størrelsen af vinduet på programmet-->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="20"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="20" />
+        </Grid.RowDefinitions>
+
+        <!-- Liste til at vise managers-->
+        <ListView x:Name="manager_list" 
+                  Grid.Column="1" 
+                  Grid.Row="2" 
+                  Grid.ColumnSpan="3"
+                  Grid.RowSpan="3"
+                  Margin="20"
+                  />
+
+
+
+        <!-- knapper til at oprette og fjerne managers -->
+        <Button x:Name="add_manager_button" 
+                Content="+" 
+                Grid.Column="1" 
+                Grid.Row="5" 
+                Margin="5" 
+                />
+
+        <Button x:Name="remove_manager_button" 
+                Content="-" 
+                Grid.Column="2" 
+                Grid.Row="5" 
+                Margin="5" 
+                />
+
+        <!-- liste til at vise den valgte managers detaljer-->
+        <ListView x:Name="manager_detail_list" 
+                  Grid.Column="4"
+                  Grid.Row="2"
+                  Grid.ColumnSpan="3"
+                  Margin="10" 
+                  />
+
+        <!-- knap til at ændre managers detaljer -->
+        <Button x:Name="edit_manager_detail_button" 
+                Content="Edit details" 
+                Grid.Column="4" 
+                Grid.Row="3" 
+                Margin="5" 
+                />
+
+        <!-- liste til at vise den valgte managers tilknyttet projekter-->
+        <ListView x:Name="manager_projects_list" 
+                  Grid.Column="4"
+                  Grid.Row="4"
+                  Grid.ColumnSpan="3"
+                  Margin="10"
+                  />
+
+        <!-- knapper til at oprette og fjerne projekter fra en manager -->
+        <Button x:Name="add_project_to_manager_button" 
+                Content="+" 
+                Grid.Column="4" 
+                Grid.Row="5" 
+                Margin="5" 
+                />
+
+        <Button x:Name="remove_project_from_manager_button" 
+                Content="-" 
+                Grid.Column="5" 
+                Grid.Row="5" 
+                Margin="5" 
+                />
+
     </Grid>
 </UserControl>

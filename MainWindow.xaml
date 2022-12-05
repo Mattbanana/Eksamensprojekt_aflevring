@@ -22,7 +22,7 @@
     </Window.Resources>
    
     <Grid>
-        <!-- Dynamisk grid så man kan ændre størrelsen af vinduet på programmet-->
+        <!-- Dynamisk grid, ændre størrelsen af vinduet på programmet-->
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="20"/>
             <ColumnDefinition Width="auto"/>
