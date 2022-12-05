@@ -27,10 +27,10 @@ namespace Eksamensprojekt_2nd
         {
             InitializeComponent();
 
-            List<Project> projects_list = new();
+            List<Project> projects = new List<Project>() ;
 
-            Project.add(new Project("project1", "1", 300, "2015-01-02", "2016-02-11", "hans mor er lækker"));
-            Project.add(new Project("project2", "2", 300, "2015-03-12", "2016-02-11", "hans mor er også lækker"));
+            projects.add(new Project("project1", "1", 300, "2015-01-02", "2016-02-11", "fjollet makker"));
+            projects.add(new Project("project2", "2", 300, "2015-03-12", "2016-02-11", "glad for fransk nugat"));
 
         }
 
