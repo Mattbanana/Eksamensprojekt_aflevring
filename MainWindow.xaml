@@ -8,14 +8,16 @@
         xmlns:views="clr-namespace:Eksamensprojekt_2nd.Views"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-   
+
+    <!-- Datatemplate til views  -->   
+    
     <Window.Resources>
-        <DataTemplate x:Name="Projectsview" DataType="{x:Type viewmodels:Projects_viewmodel}">
+        <DataTemplate x:Name="Projects_view" DataType="{x:Type viewmodels:Projects_viewmodel}">
             <views:Projects_view DataContext="{Binding}"/>
         </DataTemplate>
         
 
-        <DataTemplate x:Name="Projectmanagersview" DataType="{x:Type viewmodels:Project_managers_viewmodel}">
+        <DataTemplate x:Name="Project_managers_view" DataType="{x:Type viewmodels:Project_managers_viewmodel}">
             <views:Project_manager_view DataContext="{Binding}"/>
         </DataTemplate>
 
@@ -67,5 +69,6 @@
         <!-- område hvor view skal ændre sig-->
         <ContentControl Grid.Column="1" Grid.ColumnSpan="6" Grid.Row="2" Grid.RowSpan="6" Content="{Binding}"/>
 
+       
     </Grid>
 </Window>

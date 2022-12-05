@@ -1,4 +1,5 @@
-﻿using Eksamensprojekt_2nd.Viewmodels;
+﻿using Eksamensprojekt_2nd.Models;
+using Eksamensprojekt_2nd.Viewmodels;
 using Eksamensprojekt_2nd.Views;
 using System;
 using System.Collections.Generic;
@@ -25,6 +26,12 @@ namespace Eksamensprojekt_2nd
         public MainWindow()
         {
             InitializeComponent();
+
+            List<Project> projects_list = new();
+
+            Project.add(new Project("project1", "1", 300, "2015-01-02", "2016-02-11", "hans mor er lækker"));
+            Project.add(new Project("project2", "2", 300, "2015-03-12", "2016-02-11", "hans mor er også lækker"));
+
         }
 
         private void project_view_button_Click(object sender, RoutedEventArgs e)
