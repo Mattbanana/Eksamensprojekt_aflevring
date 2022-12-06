@@ -17,8 +17,16 @@ namespace Eksamensprojekt_2nd.Models
 
 
         // Constructor
-        public Project_manager() 
+        public Project_manager(string Name, string Employee_number, string Phone_number, string Email, 
+            string Comment, double Hours_available_per_month) 
         { 
+            this.Name = Name;
+            this.Employee_number = Employee_number;
+            this.Phone_number = Phone_number;
+            this.Email = Email;
+            this.Comment = Comment;
+            this.Hours_available_per_month = Hours_available_per_month;
+
         }
     }
 }
