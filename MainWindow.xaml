@@ -17,11 +17,11 @@
         
         </DataTemplate>
         
-<!--
+
         <DataTemplate x:Name="Project_managers_view" DataType="{x:Type viewmodels:Project_managers_viewmodel}">
             <views:Project_manager_view DataContext="{Binding}"/>
         </DataTemplate>
--->    
+   
     </Window.Resources>
    
     <Grid>
