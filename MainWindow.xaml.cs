@@ -31,9 +31,9 @@ namespace Eksamensprojekt_2nd
            /// midlertidig hardcoded liste med projekter, til test af program. Skal komme fra sql server senere.
             List<Project> projects = new List<Project>() ;
 
-            projects.Add(new Project("project 1", "1", 300, "2015-01-02", "2016-02-11", "mangler skruer"));
-            projects.Add(new Project("project 2", "2", 300, "2015-03-12", "2016-02-11", "mangler skruer"));
-            projects.Add(new Project("project 3", "3", 300, "2015-04-8", "2016-02-11", "manger skruer"));
+            projects.Add(new Project("project1", "1", 300, "2015-01-02", "2016-02-11", "sur som fanden ham selv"));
+            projects.Add(new Project("project2", "2", 300, "2015-03-12", "2016-02-11", "glad for fransk nugat"));
+            projects.Add(new Project("project3", "3", 300, "2015-04-8", "2016-02-11", "knap så glad for fransk nugat"));
 
 
             /// midlertidig hardcoded liste med projekt managers, til test af program. Skal komme fra sql server senere.
