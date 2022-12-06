@@ -10,7 +10,7 @@
         Title="MainWindow" Height="450" Width="800">
     
     <!-- Datatemplate til views  -->   
-<!--   
+   
     <Window.Resources>
         <DataTemplate x:Name="Projects_view" DataType="{x:Type viewmodels:Projects_viewmodel}">
             <views:Projects_view DataContext="{Binding}"/>
@@ -23,7 +23,7 @@
         </DataTemplate>
     
     </Window.Resources>
--->  
+  
     <Grid>
         <!-- Dynamisk grid, ændre størrelsen af vinduet på programmet-->
         <Grid.ColumnDefinitions>
