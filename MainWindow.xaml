@@ -8,7 +8,7 @@
         xmlns:views="clr-namespace:Eksamensprojekt_2nd.Views"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-
+    
     <!-- Datatemplate til views  -->   
    
     <Window.Resources>
