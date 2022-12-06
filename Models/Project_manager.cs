@@ -6,18 +6,18 @@ using System.Threading.Tasks;
 
 namespace Eksamensprojekt_2nd.Models
 {
-    class project_manager
+    class Project_manager
     {
-        public string? name { get; set; }
-        public string? employee_number { get; set; }
-        public string? phone_number { get; set; }
-        public string? email { get; set; }
-        public string? comment { get; set; }
-        public double? hours_available_per_month { get; set; }
+        public string? Name { get; set; }
+        public string? Employee_number { get; set; }
+        public string? Phone_number { get; set; }
+        public string? Email { get; set; }
+        public string? Comment { get; set; }
+        public double? Hours_available_per_month { get; set; }
 
 
         // Constructor
-        public project_manager() 
+        public Project_manager() 
         { 
         }
     }
