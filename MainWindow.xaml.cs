@@ -27,8 +27,8 @@ namespace Eksamensprojekt_2nd
         {
             InitializeComponent();
 
-
-           /// midlertidig harcoded liste med projekter, til test a program. Skal komme fra sql server senere 
+            
+           /// midlertidig hardcoded liste med projekter, til test af program. Skal komme fra sql server senere.
             List<Project> projects = new List<Project>() ;
 
             projects.Add(new Project("project 1", "1", 300, "2015-01-02", "2016-02-11", "mangler skruer"));
@@ -36,7 +36,7 @@ namespace Eksamensprojekt_2nd
             projects.Add(new Project("project 3", "3", 300, "2015-04-8", "2016-02-11", "manger skruer"));
 
 
-            /// midlertidig harcoded liste med projekt managers, til test a program. Skal komme fra sql server senere
+            /// midlertidig hardcoded liste med projekt managers, til test af program. Skal komme fra sql server senere.
             List<Project_manager> project_Managers = new List<Project_manager>();
 
             project_Managers.Add(new Project_manager("project manager 1", "sk-45783", "+455694837", "fisk@g.com","generalt ret høj", 130));
@@ -46,7 +46,7 @@ namespace Eksamensprojekt_2nd
 
 
         }
-
+        /// menu knap i toppen til at
         private void project_view_button_Click(object sender, RoutedEventArgs e)
         {
             DataContext = new Projects_viewmodel();

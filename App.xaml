@@ -2,7 +2,10 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:Eksamensprojekt_2nd"
-             StartupUri="MainWindow.xaml">
+             xmlns:view="clr-namespace:Eksamensprojekt_2nd.View"
+             xmlns:viewmodels="clr-namespace:Eksamensprojekt_2nd.Viewmodels"
+             StartupUri="project_managers_view.xaml"
+">
     <Application.Resources>
          
     </Application.Resources>
