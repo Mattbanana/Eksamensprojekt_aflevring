@@ -27,6 +27,8 @@ namespace Eksamensprojekt_2nd
         {
             InitializeComponent();
 
+
+           /// midlertidig harcoded liste med projekter
             List<Project> projects = new List<Project>() ;
 
             projects.add(new Project("project1", "1", 300, "2015-01-02", "2016-02-11", "fjollet makker"));
