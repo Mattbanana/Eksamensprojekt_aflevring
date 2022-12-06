@@ -29,10 +29,10 @@ namespace Eksamensprojekt_2nd
 
 
            /// midlertidig harcoded liste med projekter
-            List<Project> projects = new() ;
+            List<Project> projects = new List<Project>() ;
 
-            projects.add(new Project("project1", "1", 300, "2015-01-02", "2016-02-11", "sur som fanden ham selv"));
-            projects.add(new Project("project2", "2", 300, "2015-03-12", "2016-02-11", "glad for fransk nugat"));
+            projects.Add(new Project("project1", "1", 300, "2015-01-02", "2016-02-11", "sur som fanden ham selv"));
+            projects.Add(new Project("project2", "2", 300, "2015-03-12", "2016-02-11", "glad for fransk nugat"));
 
         }
 
