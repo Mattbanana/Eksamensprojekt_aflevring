@@ -4,9 +4,12 @@
              xmlns:local="clr-namespace:Eksamensprojekt_2nd"
              xmlns:view="clr-namespace:Eksamensprojekt_2nd.View"
              xmlns:viewmodels="clr-namespace:Eksamensprojekt_2nd.Viewmodels"
-             StartupUri="project_managers_view.xaml"
-">
+             StartupUri="project_managers_view.xaml">
+
+
     <Application.Resources>
          
+    
     </Application.Resources>
+    
 </Application>
