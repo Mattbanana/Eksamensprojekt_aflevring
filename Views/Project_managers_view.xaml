@@ -39,11 +39,21 @@
                   Grid.ColumnSpan="3"
                   Grid.RowSpan="3"
                   Margin="20"
-                  />
+                  Background="White">
+            
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="{Binding Name}" />
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+
+        </ListView>
 
 
 
-        <!-- knapper til at oprette og fjerne managers -->
+            <!-- knapper til at oprette og fjerne managers -->
         <Button x:Name="add_manager_button" 
                 Content="+" 
                 Grid.Column="1" 

@@ -24,6 +24,8 @@ namespace Eksamensprojekt_2nd.Views
         public Project_manager_view()
         {
             InitializeComponent();
+            
+            
 
             /// midlertidig hardcoded liste med projekt managers, til test af program. Skal komme fra sql server senere.
             List<Project_manager> project_Managers = new List<Project_manager>();
@@ -31,6 +33,9 @@ namespace Eksamensprojekt_2nd.Views
             project_Managers.Add(new Project_manager("project manager 1", "sk-45783", "+455694837", "fisk@g.com", "generalt ret høj", 130));
             project_Managers.Add(new Project_manager("project manager 2", "st-483", "+45556837", "fiskestang@g.com", "knap så glad for fransk nugat", 140));
             project_Managers.Add(new Project_manager("project manager 2", "st-483", "+4555683745", "fiskestangfang@g.com", "nugat nugat nugat", 120));
+
+            
+            manager_list.ItemsSource = project_Managers;
 
         }
     }
