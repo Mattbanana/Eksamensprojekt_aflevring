@@ -59,7 +59,8 @@
                 Grid.Column="1" 
                 Grid.Row="5" 
                 Margin="5" 
-                />
+                Click="add_manager_button_Click"
+        />
 
         <Button x:Name="remove_manager_button" 
                 Content="-" 

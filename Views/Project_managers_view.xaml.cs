@@ -1,4 +1,5 @@
 ﻿using Eksamensprojekt_2nd.Models;
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -37,6 +38,13 @@ namespace Eksamensprojekt_2nd.Views
             
             manager_list.ItemsSource = project_Managers;
 
+        }
+
+        private void add_manager_button_Click(object sender, RoutedEventArgs e)
+        {
+            Create_project_manager_window create_project_manager_window = new Create_project_manager_window();
+            create_project_manager_window.Show();
+            
         }
     }
 }
