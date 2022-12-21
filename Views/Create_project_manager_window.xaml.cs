@@ -23,5 +23,10 @@ namespace Eksamensprojekt_2nd.Views
         {
             InitializeComponent();
         }
+
+        private void Create_project_manager_button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
