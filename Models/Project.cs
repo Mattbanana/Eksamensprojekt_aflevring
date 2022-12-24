@@ -56,15 +56,12 @@ namespace Eksamensprojekt_2nd.Models
                  using (SqlConnection connection = new SqlConnection(connectionString))
                  {
                     connection.Open();
-                    int? Test_int = 343;
-                    string Test_string_1 = "en lakssdsdsd";
 
-
-                    string sql = "INSERT INTO Project_table_5 (Name,Project_ID,Hours_planed,Start_date,End_date,Comment) VALUES (@Project_name,@Project_ID, @Hours_planed, @Start_date, @End_date, @Comment)";
+                    string sql = "INSERT INTO Project_table_5 (Name,Project_ID,Hours_planed,Start_date,End_date,Comment) " +
+                        "VALUES (@Project_name,@Project_ID, @Hours_planed, @Start_date, @End_date, @Comment)";
 
                     SqlCommand command = new SqlCommand(sql, connection);
 
-                    //command.Parameters.AddWithValue("@PK_project", Test_1);
                     command.Parameters.AddWithValue("@Project_name", this.Project_name);
                     command.Parameters.AddWithValue("@Project_ID", this.Project_number);
                     command.Parameters.AddWithValue("@hours_planed", this.Hours_planed);
@@ -72,36 +69,12 @@ namespace Eksamensprojekt_2nd.Models
                     command.Parameters.AddWithValue("@End_date", this.End_date);
                     command.Parameters.AddWithValue("@Comment", this.Comment);
 
-                    //"PK_projects int," +
-                    //"Name varchar(100)," +
-                    //"Hours_planed int," +
-                    //"Project_ID varchar(100)," +
-                    //"Start_date date," +
-                    //"End_date date," +
-                    //"Comment varchar(1000))";
-
-
-
-                    //string sql = "INSERT INTO Projects_table_4 (PK_projects, Name, Hours_planed," +
-                    //        " Project_ID, Start_date, End_date, Comment) " +
-                    //        "VALUES (@PK_projects, Project_name, @Project_ID, @Hours_planed, " +
-                    //        "@Project_ID, @Start_date, @End_date, @Comment)";
-
-                    //        SqlCommand command = new SqlCommand(sql, connection);
-
-                    //        command.Parameters.AddWithValue("@PK_projects", this.PK_project);
-                    //        command.Parameters.AddWithValue("@Project_name", Test_string_1);
-                    //        command.Parameters.AddWithValue("@Hours_planed", Test_int);
-                    //        command.Parameters.AddWithValue("@Project_ID", this.Hours_planed);
-                    //        command.Parameters.AddWithValue("@Start_date", this.Start_date);
-                    //        command.Parameters.AddWithValue("@End_date", this.End_date);
-                    //        command.Parameters.AddWithValue("@Comment", this.Comment);
                     command.ExecuteNonQuery();
                 }
             }
             catch(SqlException ex) 
             {
-                MessageBox.Show("Some text" + ex, "Some title");
+                MessageBox.Show(""+ex, "");
         
             }
         }
@@ -135,7 +108,6 @@ namespace Eksamensprojekt_2nd.Models
 
 
         //a methodd that creates a table in a ms sql database.
-        //the table is named project_table and has fields corresponding to the properties of the Project class.
         public void CreateTable()
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
@@ -155,7 +127,7 @@ namespace Eksamensprojekt_2nd.Models
         }
 
 
-
+        //A class to test data connection to database, for debuging purposes.
 
         public void Testdataaccess()
         {
