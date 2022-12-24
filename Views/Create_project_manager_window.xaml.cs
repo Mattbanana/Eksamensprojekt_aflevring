@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Eksamensprojekt_2nd.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -26,6 +27,7 @@ namespace Eksamensprojekt_2nd.Views
 
         private void Create_project_manager_button_Click(object sender, RoutedEventArgs e)
         {
+         
 
         }
     }

@@ -46,7 +46,7 @@
                 Content="+" 
                 Grid.Column="1" 
                 Grid.Row="5" 
-                Margin="5" 
+                Margin="5,5,0,5" HorizontalAlignment="Left" Width="13" Click="add_project_button_Click" 
                 />
 
         <Button x:Name="remove_project_button" 

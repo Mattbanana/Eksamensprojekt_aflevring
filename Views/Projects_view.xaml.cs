@@ -1,4 +1,5 @@
 ﻿using Eksamensprojekt_2nd.Models;
+using Eksamensprojekt_2nd.Viewmodels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,11 +27,17 @@ namespace Eksamensprojekt_2nd.Views
             InitializeComponent();
 
             /// midlertidig hardcoded liste med projekter, til test af program. Skal komme fra sql server senere.
-            List<Project> projects = new List<Project>();
+            //List<Project> projects = new List<Project>();
 
-            projects.Add(new Project("project1", "1", 300, "2015-01-02", "2016-02-11", "sur som fanden ham selv"));
-            projects.Add(new Project("project2", "2", 300, "2015-03-12", "2016-02-11", "glad for fransk nugat"));
-            projects.Add(new Project("project3", "3", 300, "2015-04-8", "2016-02-11", "knap så glad for fransk nugat"));
+            //projects.Add(new Project("project1", "1", 300, "2015-01-02", "2016-02-11", "sur som fanden ham selv"));
+            //projects.Add(new Project("project2", "2", 300, "2015-03-12", "2016-02-11", "glad for fransk nugat"));
+            //projects.Add(new Project("project3", "3", 300, "2015-04-8", "2016-02-11", "knap så glad for fransk nugat"));
+        }
+
+        private void add_project_button_Click(object sender, RoutedEventArgs e)
+        {
+            Create_project_window create_project_window = new Create_project_window();
+            create_project_window.Show();
         }
     }
 }

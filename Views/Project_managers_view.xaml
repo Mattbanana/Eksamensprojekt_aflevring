@@ -40,7 +40,7 @@
                   Grid.RowSpan="3"
                   Margin="20"
                   Background="White">
-            
+
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Orientation="Horizontal">
@@ -53,13 +53,13 @@
 
 
 
-            <!-- knapper til at oprette og fjerne managers -->
+        <!-- knapper til at oprette og fjerne managers -->
         <Button x:Name="add_manager_button" 
                 Content="+" 
                 Grid.Column="1" 
                 Grid.Row="5" 
-                Margin="5" 
-                Click="add_manager_button_Click"
+                Margin="5,5,0,5" 
+                Click="add_manager_button_Click" HorizontalAlignment="Left" Width="13"
         />
 
         <Button x:Name="remove_manager_button" 
