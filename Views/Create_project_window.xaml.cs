@@ -39,18 +39,8 @@ namespace Eksamensprojekt_2nd.Views
         private void Create_project_manager_button_Click(object sender, RoutedEventArgs e)
         {
 
-            
-            //var p_name = Name_input_project_textbox.Text;
-            //var p_id = Project_ref_input_project_textbox.Text;
-            var h_planed = hours_planned_input_project_textbox.Text;
-            //var s_date = Start_date_project_textbox.Text;
-            //var e_date = End_date_project_textbox.Text;
-            //var comm = comment_input_project_textbox.Text;
-
-            Double conv_h_planed = Convert.ToDouble(h_planed);
-
             Project Input_project = new Project(0, Name_input_project_textbox.Text, Project_ref_input_project_textbox.Text,
-                conv_h_planed, Start_date_project_textbox.Text, End_date_project_textbox.Text, comment_input_project_textbox.Text);
+                Convert.ToDouble(hours_planned_input_project_textbox.Text), Start_date_project_textbox.Text, End_date_project_textbox.Text, comment_input_project_textbox.Text);
 
            // Input_project.CreateTable();
 
