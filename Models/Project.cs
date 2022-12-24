@@ -33,8 +33,10 @@ namespace Eksamensprojekt_2nd.Models
         
         }
         string connectionString = "Server=10.56.8.37 ;Database=DB20;User Id=STUDENT20;Password= OPENDB_20;";
+        
         //a method that saves the Project class to a table named project_table in a ms sql database.
         //with fields corresponding to the properties of the Project class.
+         
         public void SaveProject()
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
@@ -42,10 +44,10 @@ namespace Eksamensprojekt_2nd.Models
                 connection.Open();
                 string sql = "INSERT INTO project_table (PK_ID, Project_name, Project_number, Hours_planed, Start_date, End_date, Comment) VALUES (@PK_ID, @Project_name, @Project_number, @Hours_planed, @Start_date, @End_date, @Comment)";
                 SqlCommand command = new SqlCommand(sql, connection);
-                command.Parameters.AddWithValue("@PK_ID", PK_projects);
-                command.Parameters.AddWithValue("@Project_name", Project_name);
-                command.Parameters.AddWithValue("@Project_number", Project_number);
-                command.Parameters.AddWithValue("@Hours_planed", Hours_planed);
+                command.Parameters.AddWithValue("@PK_projects", PK_projects);
+                command.Parameters.AddWithValue("@Name", Project_name);
+                command.Parameters.AddWithValue("@Hours_planed", Project_number);
+                command.Parameters.AddWithValue("@Project_ID", Hours_planed);
                 command.Parameters.AddWithValue("@Start_date", Start_date);
                 command.Parameters.AddWithValue("@End_date", End_date);
                 command.Parameters.AddWithValue("@Comment", Comment);
@@ -55,11 +57,11 @@ namespace Eksamensprojekt_2nd.Models
 
         //a method that Reads that reads all the entries table project table in a ms sql database.
         //and returns a list of Project objects.
+        // if the list already contains entries, the method clears the list before adding new entries.
 
         public List<Project> ReadProject()
         {
             List<Project> projectList = new List<Project>();
-            
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
@@ -68,12 +70,17 @@ namespace Eksamensprojekt_2nd.Models
                 SqlDataReader reader = command.ExecuteReader();
                 while (reader.Read())
                 {
+                    if (projectList.Count > 0)
+                    {
+                        projectList.Clear();
+                    }
                     Project project = new Project(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetDouble(3), reader.GetString(4), reader.GetString(5), reader.GetString(6));
                     projectList.Add(project);
                 }
             }
             return projectList;
         }
+
        
 
 
