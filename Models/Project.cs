@@ -60,7 +60,7 @@ namespace Eksamensprojekt_2nd.Models
                     string Test_string_1 = "en lakssdsdsd";
 
 
-                    string sql = "INSERT INTO Project_table_4 (Name,Project_ID,Hours_planed,Start_date,End_date,Comment) VALUES (@Project_name,@Project_ID, @Hours_planed, @Start_date, @End_date, @Comment)";
+                    string sql = "INSERT INTO Project_table_5 (Name,Project_ID,Hours_planed,Start_date,End_date,Comment) VALUES (@Project_name,@Project_ID, @Hours_planed, @Start_date, @End_date, @Comment)";
 
                     SqlCommand command = new SqlCommand(sql, connection);
 
@@ -141,8 +141,8 @@ namespace Eksamensprojekt_2nd.Models
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
-                string sql = "CREATE TABLE project_table_4 (" +
-                    "PK_projects int," +
+                string sql = "CREATE TABLE project_table_5 (" +
+                    "PK_projects int PRIMARY KEY IDENTITY," +
                     "Name varchar(100)," +
                     "Hours_planed int," +
                     "Project_ID varchar(100)," +
