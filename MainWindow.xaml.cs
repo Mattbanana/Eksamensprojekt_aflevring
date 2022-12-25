@@ -27,21 +27,17 @@ namespace Eksamensprojekt_2nd
         {
             InitializeComponent();
 
-            
-          
-           
-
 
         }
         /// menu knap i toppen til at
         private void project_view_button_Click(object sender, RoutedEventArgs e)
         {
-            DataContext = new Projects_viewmodel();
+            this.DataContext = new Projects_view();
         }
 
         private void manager_view_button_Click(object sender, RoutedEventArgs e)
         {
-            DataContext = new Project_managers_viewmodel();
+            this.DataContext = new Project_manager_view();
         }
     }
 }
