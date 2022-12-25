@@ -34,13 +34,31 @@
         </Grid.RowDefinitions>
 
         <!-- Liste til at vise projects som er oprettet-->
-        <ListView x:Name="projects_list" 
+        <ListView x:Name="projects_listview" 
                   Grid.Column="1" 
                   Grid.Row="2" 
                   Grid.ColumnSpan="3"
                   Grid.RowSpan="3"
                   Margin="20"
-                  />
+                  >
+            
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <!-- Display the item's name in a TextBlock -->
+                    <TextBlock Text="{Binding Project_name}" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        
+        </ListView>
+
+
+
+        <!-- Template for the items in the ListView -->
+           
+
+            
+        
+        
         <!-- knapper til at oprette og fjerne projects -->
         <Button x:Name="add_project_button" 
                 Content="+" 

@@ -40,11 +40,12 @@ namespace Eksamensprojekt_2nd.Views
         {
 
             Project Input_project = new Project(0, Name_input_project_textbox.Text, Project_ref_input_project_textbox.Text,
-                Convert.ToDouble(hours_planned_input_project_textbox.Text), Start_date_project_textbox.Text, End_date_project_textbox.Text, comment_input_project_textbox.Text);
+                Convert.ToInt32(hours_planned_input_project_textbox.Text), Start_date_project_textbox.Text, End_date_project_textbox.Text, comment_input_project_textbox.Text);
 
            // Input_project.CreateTable();
 
             Input_project.GreateProject();
+            
 
             
 

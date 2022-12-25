@@ -14,14 +14,13 @@ namespace Eksamensprojekt_2nd.Models
         public int? PK_project { get; set; }
         public string? Project_name { get; set; }
         public string? Project_number { get; set; }
-        public double? Hours_planed { get; set; }
+        public int? Hours_planed { get; set; }
         public string? Start_date { get; set; }
         public string? End_date { get; set; }
         public string? Comment { get; set; }
 
-
         //constructor
-        public Project( int pk_projects, string project_name, string? project_number, double hours_planed,
+        public Project( int pk_projects, string project_name, string? project_number, int hours_planed,
              string start_date, string end_date, string comment)
         {
             this.PK_project = pk_projects;
@@ -32,6 +31,8 @@ namespace Eksamensprojekt_2nd.Models
             this.End_date = end_date;
             this.Comment = comment;
 
+            
+            
             //intitialize project with default values
 
             //this.Project_name = "to laks";
@@ -83,27 +84,28 @@ namespace Eksamensprojekt_2nd.Models
         //and returns a list of Project objects.
         // if the list already contains entries, the method clears the list before adding new entries.
 
-        public List<Project> ReadProject()
-        {
-            List<Project> projectList = new List<Project>();
-            using (SqlConnection connection = new SqlConnection(connectionString))
-            {
-                connection.Open();
-                string sql = "SELECT * FROM project_table";
-                SqlCommand command = new SqlCommand(sql, connection);
-                SqlDataReader reader = command.ExecuteReader();
-                while (reader.Read())
-                {
-                    if (projectList.Count > 0)
-                    {
-                        projectList.Clear();
-                    }
-                    Project project = new Project(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetDouble(3), reader.GetString(4), reader.GetString(5), reader.GetString(6));
-                    projectList.Add(project);
-                }
-            }
-            return projectList;
-        }
+        //public List<Project> ReadProjectTable()
+        //{
+            
+            
+        //    using (SqlConnection connection = new SqlConnection(connectionString))
+        //    {
+        //        connection.Open();
+        //        string sql = "SELECT * FROM project_table_5";
+        //        SqlCommand command = new SqlCommand(sql, connection);
+        //        SqlDataReader reader = command.ExecuteReader();
+        //        while (reader.Read())
+        //        {
+        //            if (projectList.Count > 0)
+        //            {
+        //                projectList.Clear();
+        //            }
+        //            Project project = new Project(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetDouble(3), reader.GetString(4), reader.GetString(5), reader.GetString(6));
+        //            projectList.Add(project);
+        //        }
+        //    }
+        //    return projectList;
+        //}
 
 
 
@@ -121,6 +123,26 @@ namespace Eksamensprojekt_2nd.Models
                     "Start_date date," +
                     "End_date date," +
                     "Comment varchar(1000))";
+                SqlCommand command = new SqlCommand(sql, connection);
+                command.ExecuteNonQuery();
+            }
+        }
+
+
+        public void CreateTestTable()
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                string sql = "CREATE TABLE Test_table(" +
+                    // "PK_projects int PRIMARY KEY IDENTITY," +
+                    "PK_projects nvarchar(10)" +
+                    "Name nvarchar(10)," +
+                    "Hours_planed nvarchar(10)," +
+                    "Project_ID nvarchar(10)," +
+                    "Start_date nvarchar(10)," +
+                    "End_date nvarchar(10)," +
+                    "Comment nvarchar(10)";
                 SqlCommand command = new SqlCommand(sql, connection);
                 command.ExecuteNonQuery();
             }
