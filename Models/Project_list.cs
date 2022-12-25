@@ -11,7 +11,9 @@ namespace Eksamensprojekt_2nd.Models
     {
         string connectionString = "Server=10.56.8.37;Database=DB20;User Id=STUDENT20;Password= OPENDB_20;";
         
-       public List<Project> Create()
+       
+        
+        public List<Project> Create()
         {
 
             List<Project> Project_list = new List<Project>();
@@ -22,7 +24,7 @@ namespace Eksamensprojekt_2nd.Models
 
         public void Load()
         {
-            List<Project>  Projects = new List<Project>();
+            List<Project>  Project_list = new List<Project>();
             using (var connection = new SqlConnection(connectionString))
             {
                 connection.Open();
@@ -46,9 +48,9 @@ namespace Eksamensprojekt_2nd.Models
                     while (reader.Read())
                     {
                         
-                        if (Projects.Count > 0)
+                        if (Project_list.Count > 0)
                         {
-                            Projects.Clear();
+                            Project_list.Clear();
                         }
                         
                         Project project = new Project(
@@ -59,7 +61,7 @@ namespace Eksamensprojekt_2nd.Models
                         reader.GetString(4),
                         reader.GetString(5),
                         reader.GetString(6));
-                        Projects.Add(project);
+                        Project_list.Add(project);
                     }
                 }
             }
