@@ -7,7 +7,7 @@
         xmlns:viewmodels="clr-namespace:Eksamensprojekt_2nd.Viewmodels"
         xmlns:views="clr-namespace:Eksamensprojekt_2nd.Views"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="400">
     
     <!-- Datatemplate til views  -->   
    
