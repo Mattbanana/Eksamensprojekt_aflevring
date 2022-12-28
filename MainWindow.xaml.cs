@@ -1,5 +1,4 @@
 ﻿using Eksamensprojekt_2nd.Models;
-using Eksamensprojekt_2nd.Viewmodels;
 using Eksamensprojekt_2nd.Views;
 using System;
 using System.Collections.Generic;
@@ -18,18 +17,13 @@ using System.Windows.Shapes;
 
 namespace Eksamensprojekt_2nd
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
         public MainWindow()
         {
             InitializeComponent();
-
-
         }
-        /// menu knap i toppen til at
+        
         private void project_view_button_Click(object sender, RoutedEventArgs e)
         {
             this.DataContext = new Projects_view();

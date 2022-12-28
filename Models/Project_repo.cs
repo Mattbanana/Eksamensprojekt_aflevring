@@ -4,11 +4,11 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using static Eksamensprojekt_2nd.Views.Projects_view;
+using Eksamensprojekt_2nd.Views;
 
 namespace Eksamensprojekt_2nd.Models
 {
-    class Project_list_helper
+    class Project_repo
     {
         string connectionString = "Server=10.56.8.37;Database=DB20;User Id=STUDENT20;Password= OPENDB_20;";
  
@@ -106,7 +106,7 @@ namespace Eksamensprojekt_2nd.Models
                     SqlCommand command = new SqlCommand(sql, connection);
 
                     command.Parameters.AddWithValue("@Project_name", project.Project_name);
-                    command.Parameters.AddWithValue("@Project_ID", project.Project_number);
+                    command.Parameters.AddWithValue("@Project_ID", project.Project_ref);
                     command.Parameters.AddWithValue("@Hours_planed", project.Hours_planed);
                     command.Parameters.AddWithValue("@Start_date", project.Start_date);
                     command.Parameters.AddWithValue("@End_date", project.End_date);

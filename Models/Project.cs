@@ -13,7 +13,7 @@ namespace Eksamensprojekt_2nd.Models
     {
         //public int? PK_project { get; set; }
         public string Project_name { get; set; }
-        public string Project_number { get; set; }
+        public string Project_ref { get; set; }
         public int Hours_planed { get; set; }
         public DateTime Start_date { get; set; }
         public DateTime End_date { get; set; }
@@ -22,19 +22,19 @@ namespace Eksamensprojekt_2nd.Models
         string connectionString = "Server=10.56.8.37;Database=DB20;User Id=STUDENT20;Password= OPENDB_20;";
 
         //constructor
-        public Project( string project_name, string project_number, int hours_planed,
-             DateTime start_date, DateTime end_date, string comment)
+        public Project( string _Project_name, string _Project_ref, int _Hours_planed,
+             DateTime _Start_date, DateTime _End_date, string _Comment)
         {
            // this.PK_project = pk_projects;
-            this.Project_name = project_name;
-            this.Project_number = project_number;
-            this.Hours_planed = hours_planed;
-            this.Start_date = start_date;
-            this.End_date = end_date;
-            this.Comment = comment;
+            this.Project_name = _Project_name;
+            this.Project_ref = _Project_ref;
+            this.Hours_planed = _Hours_planed;
+            this.Start_date = _Start_date;
+            this.End_date = _End_date;
+            this.Comment = _Comment;
         }
         
-        public void GreateProjectInProjectTable()
+        public void GreateProjectInDBTable()
         {
             try
             {
@@ -48,7 +48,7 @@ namespace Eksamensprojekt_2nd.Models
                     SqlCommand command = new SqlCommand(sql, connection);
 
                     command.Parameters.AddWithValue("@Project_name", this.Project_name);
-                    command.Parameters.AddWithValue("@Project_ID", this.Project_number);
+                    command.Parameters.AddWithValue("@Project_ID", this.Project_ref);
                     command.Parameters.AddWithValue("@hours_planed", this.Hours_planed);
                     command.Parameters.AddWithValue("@Start_date", this.Start_date);
                     command.Parameters.AddWithValue("@End_date", this.End_date);

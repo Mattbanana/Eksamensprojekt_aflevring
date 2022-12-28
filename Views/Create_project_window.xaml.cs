@@ -15,9 +15,6 @@ using System.Windows.Shapes;
 
 namespace Eksamensprojekt_2nd.Views
 {
-    /// <summary>
-    /// Interaction logic for Create_project_window.xaml
-    /// </summary>
     public partial class Create_project_window : Window
     {
         public Create_project_window()
@@ -43,7 +40,7 @@ namespace Eksamensprojekt_2nd.Views
                 DateTime.Parse(End_date_project_textbox.Text), 
                 comment_input_project_textbox.Text);
 
-                Input_project.GreateProjectInProjectTable();
+                Input_project.GreateProjectInDBTable();
 
         }
     }

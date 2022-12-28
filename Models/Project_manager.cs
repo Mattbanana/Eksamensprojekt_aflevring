@@ -9,23 +9,23 @@ namespace Eksamensprojekt_2nd.Models
     class Project_manager
     {
         public string? Name { get; set; }
-        public string? Employee_number { get; set; }
+        public string? Employee_ref { get; set; }
         public string? Phone_number { get; set; }
         public string? Email { get; set; }
         public string? Comment { get; set; }
-        public double? Hours_available_per_month { get; set; }
+        public int? Hours_available_per_month { get; set; }
 
 
         // Constructor
-        public Project_manager(string Name, string Employee_number, string Phone_number, string Email, 
-            string Comment, double Hours_available_per_month) 
+        public Project_manager(string _Name, string _Employee_ref, string _Phone_number, string _Email, 
+            string _Comment, int _Hours_available_per_month) 
         { 
-            this.Name = Name;
-            this.Employee_number = Employee_number;
-            this.Phone_number = Phone_number;
-            this.Email = Email;
-            this.Comment = Comment;
-            this.Hours_available_per_month = Hours_available_per_month;
+            this.Name = _Name;
+            this.Employee_ref = _Employee_ref;
+            this.Phone_number = _Phone_number;
+            this.Email = _Email;
+            this.Comment = _Comment;
+            this.Hours_available_per_month = _Hours_available_per_month;
 
         }
     }

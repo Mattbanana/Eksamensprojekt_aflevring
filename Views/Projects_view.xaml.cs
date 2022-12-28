@@ -63,9 +63,10 @@ namespace Eksamensprojekt_2nd.Views
             {
                 connection.Open();
                 string sql = "CREATE TABLE Project_table(" +
-                    "PK_projects int PRIMARY KEY IDENTITY," +
+                    "PK_project int PRIMARY KEY IDENTITY," +
+                    "FK_project_manager)," +
                     "Name nvarchar(100)," +
-                    "Project_ID nvarchar(100)," +
+                    "Project_ref nvarchar(100)," +
                     "Hours_planed int," +
                     "Start_date DateTime," +
                     "End_date DateTime," +
@@ -128,7 +129,7 @@ namespace Eksamensprojekt_2nd.Views
                     SqlCommand command = new SqlCommand(sql, connection);
 
                     command.Parameters.AddWithValue("@Project_name", project.Project_name);
-                    command.Parameters.AddWithValue("@Project_ID", project.Project_number);
+                    command.Parameters.AddWithValue("@Project_ID", project.Project_ref);
                     command.Parameters.AddWithValue("@Hours_planed", project.Hours_planed);
                     command.Parameters.AddWithValue("@Start_date", project.Start_date);
                     command.Parameters.AddWithValue("@End_date", project.End_date);
@@ -347,9 +348,25 @@ namespace Eksamensprojekt_2nd.Views
             create_project_window.Show();
         }
 
-        private void projects_list_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void projects_listview_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
+            try
+            {
+                Project selectedItem = (Project)projects_listview.SelectedItem;
+                MessageBox.Show("valg:" + selectedItem);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("ingen valg");
+                throw;
+            }
+            
 
+            
+            
+            
+            
+            
         }
     }
 }
