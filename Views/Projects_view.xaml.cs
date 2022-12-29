@@ -37,7 +37,7 @@ namespace Eksamensprojekt_2nd.Views
             
 
             List<Project> projects_list = new() ;
-            projects_list = GetAllProjecttablefromDB();
+            projects_list = Project_repo.GetAllProjectTableDB();
             
             projects_listview.ItemsSource = projects_list;
 
@@ -344,6 +344,9 @@ namespace Eksamensprojekt_2nd.Views
 
         private void add_project_button_Click(object sender, RoutedEventArgs e)
         {
+            
+            
+            
             Create_project_window create_project_window = new Create_project_window();
             create_project_window.Show();
         }

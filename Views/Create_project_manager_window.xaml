@@ -37,32 +37,32 @@
         <TextBlock Grid.Column="1" Grid.Row="1" FontSize="20">
                 Name: 
         </TextBlock>
-        <TextBox Grid.Column="2" Grid.Row="1" MinWidth="100"  x:Name="Name_input_project_managers" FontSize="20"/>    
+        <TextBox Grid.Column="2" Grid.Row="1" MinWidth="100"  x:Name="Name_input_project_manager_textbox" FontSize="20"/>    
         
         <TextBlock Grid.Column="1" Grid.Row="2" FontSize="20">
                 Employee number:
         </TextBlock>
-        <TextBox Grid.Column="2" Grid.Row="2" x:Name="Employee_input_project_managers" FontSize="20"/>
+        <TextBox Grid.Column="2" Grid.Row="2" x:Name="Employee_input_project_manager_textbox" FontSize="20"/>
         
         <TextBlock Grid.Column="1" Grid.Row="3" FontSize="20">
                 Phone number:
         </TextBlock>
-        <TextBox Grid.Column="2" Grid.Row="3" x:Name="Phone_number_input_project_managers" FontSize="20"/>
+        <TextBox Grid.Column="2" Grid.Row="3" x:Name="Phone_number_input_project_manager_textbox" FontSize="20"/>
 
         <TextBlock Grid.Column="1" Grid.Row="4" FontSize="20">
                 Email:
         </TextBlock>
-        <TextBox Grid.Column="2" Grid.Row="4" x:Name="Email_input_project_managers"  FontSize="20"/>
+        <TextBox Grid.Column="2" Grid.Row="4" x:Name="Email_input_project_manager_textbox"  FontSize="20"/>
         
         <TextBlock Grid.Column="1" Grid.Row="5" FontSize="20">
                 Comment:
         </TextBlock>
-        <TextBox Grid.Column="2" Grid.Row="5" x:Name="comment_input_project_managers"  FontSize="20"/>
+        <TextBox Grid.Column="2" Grid.Row="5" x:Name="comment_input_project_manager_textbox"  FontSize="20"/>
 
         <TextBlock Grid.Column="1" Grid.Row="6" FontSize="20">
                 Hours available per month:
         </TextBlock>
-        <TextBox Grid.Column="2" Grid.Row="6" x:Name="Hours_available_per_month_input_project_managers" FontSize="20"/>
+        <TextBox Grid.Column="2" Grid.Row="6" x:Name="Hours_available_per_month_input_project_manager_textbox" FontSize="20"/>
 
         <Button Grid.Column="1" Grid.Row="7" Content="Create" FontSize="20" Margin="10" Click="Create_project_manager_button_Click"/>
 

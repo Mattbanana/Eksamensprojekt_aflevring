@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using Eksamensprojekt_2nd.Views;
 
 namespace Eksamensprojekt_2nd.Models
@@ -15,49 +17,68 @@ namespace Eksamensprojekt_2nd.Models
         public List<Project> CreateProjectList()
         {
 
-            List<Project> Project_list = new List<Project>();
+            List<Project> Project_repo = new();
 
-            return Project_list;
+            return Project_repo;
         }
         
-        public static List<Project> GetAllProjecttablefromDB()
+        public static List<Project> GetAllProjectTableDB()
         {
-            List<Project> projects_list = new List<Project>();
+            
+            List<Project> Projects_repo = new();
             string connectionString = "Server=10.56.8.37;Database=DB20;User Id=STUDENT20;Password= OPENDB_20;";
-            using (SqlConnection connection = new SqlConnection(connectionString))
+           
+            try
             {
-                connection.Open();
 
-                string sql = "SELECT * FROM Project_table";
-                using (SqlCommand command = new SqlCommand(sql, connection))
+
+                using (SqlConnection connection = new SqlConnection(connectionString))
                 {
-                    using (SqlDataReader reader = command.ExecuteReader())
+                    connection.Open();
+
+                    string sql = "SELECT * FROM Project_table";
+                    using (SqlCommand command = new SqlCommand(sql, connection))
                     {
-                            while (reader.Read())
-                            {
-
-                                if (projects_list.Count > 0)
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                                while (reader.Read())
                                 {
-                                    projects_list.Clear();
-                                }
 
-                                Project project = new Project(
-                                 reader.GetString(1),
-                                 reader.GetString(3),
-                                 reader.GetInt32(2),
-                                 reader.GetDateTime(4),
-                                 reader.GetDateTime(5),
-                                 reader.GetString(6));
+                                    Project project = new Project(
+                                     reader.GetString(1),
+                                     reader.GetString(2),
+                                     reader.GetInt32(3),
+                                     reader.GetDateTime(4),
+                                     reader.GetDateTime(5),
+                                     reader.GetString(6));
  
-                                 projects_list.Add(project);
-                            }
+                                     Projects_repo.Add(project);
+                                }
+                            
+                        }
                     }
                 }
-            }
             
-            return projects_list;
+                
+
+                
+            }
+            catch (SqlException ex)
+            {
+
+                MessageBox.Show(ex.Message);
+
+            }
+
+            return Projects_repo;
         }
 
+
+
+
+
+        //metoder som bliver brugt til at oprette table i database
+        //samt query 10 rækker af genereret data til DB
         public List<Project> Generate_ProjectList_with_Data()
 
         {

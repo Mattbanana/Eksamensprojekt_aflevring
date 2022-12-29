@@ -20,7 +20,8 @@ namespace Eksamensprojekt_2nd.Views
         public Create_project_window()
         {
             InitializeComponent();
-        
+
+            //Init values for Form
             Name_input_project_textbox.Text = "Project name";
             Project_ref_input_project_textbox.Text = "Project ref";
             hours_planned_input_project_textbox.Text = "135";
@@ -29,9 +30,10 @@ namespace Eksamensprojekt_2nd.Views
             comment_input_project_textbox.Text = "comment here";
         }
 
+
+        //Create a new project, Convert input values and query it to the database
         private void Create_project_manager_button_Click(object sender, RoutedEventArgs e)
         {
-
             Project Input_project = new Project( 
                 Name_input_project_textbox.Text, 
                 Project_ref_input_project_textbox.Text,

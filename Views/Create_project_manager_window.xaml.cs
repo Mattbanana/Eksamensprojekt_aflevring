@@ -23,11 +23,28 @@ namespace Eksamensprojekt_2nd.Views
         public Create_project_manager_window()
         {
             InitializeComponent();
+
+            //Init values for Form
+            Name_input_project_manager_textbox.Text = "Project manager name";
+            Employee_input_project_manager_textbox.Text = "Employee ref";
+            Phone_number_input_project_manager_textbox.Text = "7574839999";
+            Email_input_project_manager_textbox.Text = "Email@dinmor";
+            comment_input_project_manager_textbox.Text = "comment here";
+            Hours_available_per_month_input_project_manager_textbox.Text = "135";
         }
 
         private void Create_project_manager_button_Click(object sender, RoutedEventArgs e)
         {
-         
+            Project_manager input_project_manager = new Project_manager(
+                Name_input_project_manager_textbox.Text,
+                Employee_input_project_manager_textbox.Text,
+                Phone_number_input_project_manager_textbox.Text,
+                Email_input_project_manager_textbox.Text,
+                comment_input_project_manager_textbox.Text,
+                Convert.ToInt32(Hours_available_per_month_input_project_manager_textbox.Text));
+
+                input_project_manager.CreateProjectManagerInDBTable();
+
 
         }
     }
