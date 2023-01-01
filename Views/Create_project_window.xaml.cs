@@ -1,4 +1,5 @@
 ﻿using Eksamensprojekt_2nd.Models;
+using Microsoft.VisualBasic;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,6 +16,11 @@ using System.Windows.Shapes;
 
 namespace Eksamensprojekt_2nd.Views
 {
+    /// <summary>
+    /// Interaction logic for Create_project_window.xaml
+    /// </summary>
+    /// init default values for the form inputs and creates a new project
+    /// and writes it to the database through a method call
     public partial class Create_project_window : Window
     {
         public Create_project_window()
