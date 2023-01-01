@@ -36,7 +36,9 @@ namespace Eksamensprojekt_2nd.Models
         public void CreateProjectManagerInDBTable()
         {
             //This method is used to create a new project manager in the database
-            //it does so by using System.Data.SqlClient to connect, execute query and close the connection. The query adds a new project to the database,
+            //it does so by using System.Data.SqlClient to connect, execute query and close the connection.
+            //the using statement is used to make sure the connection is closed after the query is executed.
+            //The query adds a new project to the database,
             //follow by a confirmation message.
             //its all wraped in a try-catch statement, if it fails it will throw an exception that makes a massage box appear with the error message.
 
