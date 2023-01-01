@@ -8,7 +8,7 @@
              d:DesignHeight="300" d:DesignWidth="400">
     <Grid Background="White">
         
-        <!-- Dynamisk grid så man kan ændre størrelsen af vinduet på programmet-->
+        <!-- Dynamisk grid -->
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="20"/>
             <ColumnDefinition Width="auto"/>
@@ -44,7 +44,7 @@
 
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <!-- Display the item's name in a TextBlock -->
+                    <!-- Display the item name in a TextBlock -->
                     <TextBlock Text="{Binding Project_name}" />
                 </DataTemplate>
             </ListView.ItemTemplate>
@@ -61,27 +61,27 @@
                 Margin="5,5,0,5" HorizontalAlignment="Left" Width="13" Click="add_project_button_Click" 
                 />
 
-        <Button x:Name="remove_project_button" 
+        <!--<Button x:Name="remove_project_button" 
                 Content="-" 
                 Grid.Column="2" 
                 Grid.Row="5" 
                 Margin="5" 
-                />
+                />-->
 
-        <!-- liste til at vise den valgte projects detaljer-->
+        <!-- liste til at vise den valgte projects detaljer--><!--
         <ListView x:Name="projects_detail_list" 
                   Grid.Column="4"
                   Grid.Row="2"
                   Grid.ColumnSpan="3"
                   Margin="10" 
                   />
-        <!-- knap til at ændre projects detaljer -->
+        --><!-- knap til at ændre projects detaljer --><!--
         <Button x:Name="edit_project_detail_button" 
                 Content="Edit details" 
                 Grid.Column="4" 
                 Grid.Row="5" 
                 Margin="5" 
-                />
+                />-->
 
     </Grid>
 </UserControl>

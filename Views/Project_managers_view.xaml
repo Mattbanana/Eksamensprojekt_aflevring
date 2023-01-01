@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:Eksamensprojekt_2nd.Views"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid Background="BlueViolet">
+    <Grid Background="White">
         <!-- Dynamisk grid -->
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="20"/>
@@ -32,7 +32,7 @@
             <RowDefinition Height="20" />
         </Grid.RowDefinitions>
 
-        <!-- List to show managers in databse-->
+        <!-- List to show managers in database-->
         <ListView x:Name="manager_list" 
                   Grid.Column="1" 
                   Grid.Row="2" 
@@ -62,51 +62,51 @@
                 Click="add_manager_button_Click" HorizontalAlignment="Left" Width="13"
         />
 
-        <Button x:Name="remove_manager_button" 
+        <!--<Button x:Name="remove_manager_button" 
                 Content="-" 
                 Grid.Column="2" 
                 Grid.Row="5" 
                 Margin="5" 
-                />
+                />-->
 
-        <!-- liste til at vise den valgte managers detaljer-->
+        <!-- liste til at vise den valgte managers detaljer--><!--
         <ListView x:Name="manager_detail_list" 
                   Grid.Column="4"
                   Grid.Row="2"
                   Grid.ColumnSpan="3"
                   Margin="10" 
-                  />
+                  />-->
 
-        <!-- knap til at ændre managers detaljer -->
+        <!-- knap til at ændre managers detaljer --><!--
         <Button x:Name="edit_manager_detail_button" 
                 Content="Edit details" 
                 Grid.Column="4" 
                 Grid.Row="3" 
                 Margin="5" 
-                />
+                />-->
 
-        <!-- liste til at vise den valgte managers tilknyttet projekter-->
+        <!-- liste til at vise den valgte managers tilknyttet projekter--><!--
         <ListView x:Name="manager_projects_list" 
                   Grid.Column="4"
                   Grid.Row="4"
                   Grid.ColumnSpan="3"
                   Margin="10"
-                  />
+                  />-->
 
-        <!-- knapper til at oprette og fjerne projekter fra en manager -->
+        <!-- knapper til at oprette og fjerne projekter fra en manager --><!--
         <Button x:Name="add_project_to_manager_button" 
                 Content="+" 
                 Grid.Column="4" 
                 Grid.Row="5" 
                 Margin="5" 
-                />
+                />-->
 
-        <Button x:Name="remove_project_from_manager_button" 
+        <!--<Button x:Name="remove_project_from_manager_button" 
                 Content="-" 
                 Grid.Column="5" 
                 Grid.Row="5" 
                 Margin="5" 
-                />
+                />-->
 
     </Grid>
 </UserControl>
