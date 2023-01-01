@@ -19,9 +19,6 @@ namespace Eksamensprojekt_2nd.Models
         public string? Comment { get; set; }
         public int? Hours_available_per_month { get; set; }
         
-        
-
-
         // Constructor
         public Project_manager(string _Name, string _Employee_ref, string _Phone_number, string _Email, 
             string _Comment, int _Hours_available_per_month) 
@@ -34,11 +31,15 @@ namespace Eksamensprojekt_2nd.Models
             this.Hours_available_per_month = _Hours_available_per_month;
 
         }
-
-
-        //Adds a new project manager to the database with input values from the user
+        
+        
         public void CreateProjectManagerInDBTable()
         {
+            //This method is used to create a new project manager in the database
+            //it does so by using System.Data.SqlClient to connect, execute query and close the connection. The query adds a new project to the database,
+            //follow by a confirmation message.
+            //its all wraped in a try-catch statement, if it fails it will throw an exception that makes a massage box appear with the error message.
+
             try
             {
                 using (SqlConnection connection = new SqlConnection(connectionString))

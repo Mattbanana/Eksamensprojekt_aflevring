@@ -27,7 +27,6 @@ namespace Eksamensprojekt_2nd.Models
         public Project( string _Project_name, string _Project_ref, int _Hours_planed,
              DateTime _Start_date, DateTime _End_date, string _Comment)
         {
-           // this.PK_project = pk_projects;
             this.Project_name = _Project_name;
             this.Project_ref = _Project_ref;
             this.Hours_planed = _Hours_planed;
@@ -35,9 +34,12 @@ namespace Eksamensprojekt_2nd.Models
             this.End_date = _End_date;
             this.Comment = _Comment;
         }
-        
         public void CreateProjectInDBtable()
         {
+            //This method is used to create a new project in the database
+            //it does so by using System.Data.SqlClient to connect, execute query and close the connection. The query adds a new project to the database,
+            //follow by a confirmation message.
+            //its all wraped in a try-catch statement, if it fails it will throw an exception that makes a massage box appear with the error message.
             try
             {
                  using (SqlConnection connection = new SqlConnection(connectionString))

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Linq.Expressions;
+using System.Reflection.PortableExecutable;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -17,6 +18,11 @@ namespace Eksamensprojekt_2nd.Models
         
         public static List<Project> GetAllProjectTableDB()
         {
+            //This method is used to retrive all projects in the database to a list
+            //it does so by using System.Data.SqlClient to connect, execute query and close the connection.
+            //The query adds a new project to the database,
+            //follow by a confirmation message.
+            //its all wraped in a try-catch statement, if it fails it will throw an exception that makes a massage box appear with the error message.
             List<Project> Projects_repo = new();
             string connectionString = "Server=10.56.8.37;Database=DB20;User Id=STUDENT20;Password= OPENDB_20;";
             
