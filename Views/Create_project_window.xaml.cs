@@ -30,12 +30,14 @@ namespace Eksamensprojekt_2nd.Views
             comment_input_project_textbox.Text = "comment here";
         }
 
-
-        //Create a new project, Convert input values and query it to the database
         private void Create_project_manager_button_Click(object sender, RoutedEventArgs e)
         {
-           
-               
+            //this event creates a new project and adds it to the database
+            //it also checks if the input is valid and creates a new project manager if it is
+            //if the input is not valid it will show an error message
+            //there is a method call for CreateProjectInDBTable()
+            //to query the database with the new project named input_project
+
             Project project_from_input = new Project( 
                 Name_input_project_textbox.Text, 
                 Project_ref_input_project_textbox.Text,

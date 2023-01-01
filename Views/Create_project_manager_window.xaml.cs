@@ -35,6 +35,12 @@ namespace Eksamensprojekt_2nd.Views
 
         private void Create_project_manager_button_Click(object sender, RoutedEventArgs e)
         {
+
+            //this event creates a new project manager and adds it to the database
+            //it also checks if the input is valid and creates a new project manager if it is
+            //if the input is not valid it will show an error message
+            //there is a method call for CreateProjectManagerInDBTable()
+            //to query the database with the new project manager named input_project_manager
             Project_manager input_project_manager = new Project_manager(
                 Name_input_project_manager_textbox.Text,
                 Employee_input_project_manager_textbox.Text,

@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="Create_project_window" Height="300" Width="600">
     <Grid>
-        <!-- Dynamisk grid så man kan ændre størrelsen af vinduet på programmet-->
+        <!-- Dynamisk grid-->
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="20"/>
             <ColumnDefinition Width="auto"/>
@@ -33,7 +33,7 @@
         </Grid.RowDefinitions>
 
 
-
+        <!-- input parametre to create a project -->
         <TextBlock Grid.Column="1" Grid.Row="1" FontSize="20">
                 Name:
         </TextBlock>
@@ -65,6 +65,7 @@
         </TextBlock>
         <TextBox Grid.Column="2" Grid.Row="6" x:Name="comment_input_project_textbox" FontSize="20"/>
 
+        <!--button to query the input to the database -->
         <Button Grid.Column="1" Grid.Row="7" Content="Create" FontSize="20" Margin="10" Click="Create_project_manager_button_Click"/>
 
     </Grid>

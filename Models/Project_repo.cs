@@ -62,6 +62,10 @@ namespace Eksamensprojekt_2nd.Models
             return Projects_repo;
         }
 
+        //
+        //jælpe metoder som bliver brugt til at oprette table i database
+        //samt query 10 rækker af genereret data til DB
+
         void CreateProjectTableInDB()
 
         {
@@ -86,10 +90,6 @@ namespace Eksamensprojekt_2nd.Models
             }
         }
 
-
-
-        //metoder som bliver brugt til at oprette table i database
-        //samt query 10 rækker af genereret data til DB
         public List<Project> Generate_ProjectList_with_Data()
 
         {

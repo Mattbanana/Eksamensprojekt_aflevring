@@ -7,7 +7,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid Background="BlueViolet">
-        <!-- Dynamisk grid så man kan ændre størrelsen af vinduet på programmet-->
+        <!-- Dynamisk grid -->
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="20"/>
             <ColumnDefinition Width="auto"/>
@@ -32,7 +32,7 @@
             <RowDefinition Height="20" />
         </Grid.RowDefinitions>
 
-        <!-- Liste til at vise managers-->
+        <!-- List to show managers in databse-->
         <ListView x:Name="manager_list" 
                   Grid.Column="1" 
                   Grid.Row="2" 
