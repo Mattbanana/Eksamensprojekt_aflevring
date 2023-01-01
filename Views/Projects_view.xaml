@@ -51,8 +51,6 @@
 
         </ListView>
 
-
-
         <!-- knapper til at oprette og fjerne projects -->
         <Button x:Name="add_project_button" 
                 Content="+" 
@@ -60,28 +58,5 @@
                 Grid.Row="5" 
                 Margin="5,5,0,5" HorizontalAlignment="Left" Width="13" Click="add_project_button_Click" 
                 />
-
-        <!--<Button x:Name="remove_project_button" 
-                Content="-" 
-                Grid.Column="2" 
-                Grid.Row="5" 
-                Margin="5" 
-                />-->
-
-        <!-- liste til at vise den valgte projects detaljer--><!--
-        <ListView x:Name="projects_detail_list" 
-                  Grid.Column="4"
-                  Grid.Row="2"
-                  Grid.ColumnSpan="3"
-                  Margin="10" 
-                  />
-        --><!-- knap til at ændre projects detaljer --><!--
-        <Button x:Name="edit_project_detail_button" 
-                Content="Edit details" 
-                Grid.Column="4" 
-                Grid.Row="5" 
-                Margin="5" 
-                />-->
-
     </Grid>
 </UserControl>

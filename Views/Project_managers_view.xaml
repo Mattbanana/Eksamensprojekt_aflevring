@@ -61,52 +61,5 @@
                 Margin="5,5,0,5" 
                 Click="add_manager_button_Click" HorizontalAlignment="Left" Width="13"
         />
-
-        <!--<Button x:Name="remove_manager_button" 
-                Content="-" 
-                Grid.Column="2" 
-                Grid.Row="5" 
-                Margin="5" 
-                />-->
-
-        <!-- liste til at vise den valgte managers detaljer--><!--
-        <ListView x:Name="manager_detail_list" 
-                  Grid.Column="4"
-                  Grid.Row="2"
-                  Grid.ColumnSpan="3"
-                  Margin="10" 
-                  />-->
-
-        <!-- knap til at ændre managers detaljer --><!--
-        <Button x:Name="edit_manager_detail_button" 
-                Content="Edit details" 
-                Grid.Column="4" 
-                Grid.Row="3" 
-                Margin="5" 
-                />-->
-
-        <!-- liste til at vise den valgte managers tilknyttet projekter--><!--
-        <ListView x:Name="manager_projects_list" 
-                  Grid.Column="4"
-                  Grid.Row="4"
-                  Grid.ColumnSpan="3"
-                  Margin="10"
-                  />-->
-
-        <!-- knapper til at oprette og fjerne projekter fra en manager --><!--
-        <Button x:Name="add_project_to_manager_button" 
-                Content="+" 
-                Grid.Column="4" 
-                Grid.Row="5" 
-                Margin="5" 
-                />-->
-
-        <!--<Button x:Name="remove_project_from_manager_button" 
-                Content="-" 
-                Grid.Column="5" 
-                Grid.Row="5" 
-                Margin="5" 
-                />-->
-
     </Grid>
 </UserControl>
