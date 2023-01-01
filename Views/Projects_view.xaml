@@ -51,12 +51,15 @@
 
         </ListView>
 
-        <!-- knapper til at oprette og fjerne projects -->
+        <!-- knap til at oprette -->
         <Button x:Name="add_project_button" 
-                Content="+" 
+                Content="Add Project" 
+                
                 Grid.Column="1" 
+                Grid.ColumnSpan="3"
                 Grid.Row="5" 
-                Margin="5,5,0,5" HorizontalAlignment="Left" Width="13" Click="add_project_button_Click" 
+                Margin="5,5,0,5" HorizontalAlignment="Left"  
+                Click="add_project_button_Click" 
                 />
     </Grid>
 </UserControl>

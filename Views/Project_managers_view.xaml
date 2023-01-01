@@ -13,16 +13,12 @@
             <ColumnDefinition Width="auto"/>
             <ColumnDefinition Width="auto"/>
             <ColumnDefinition Width="auto"/>
-            <ColumnDefinition Width="auto"/>
-            <ColumnDefinition Width="auto"/>
-            <ColumnDefinition Width="auto"/>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="20"/>
         </Grid.ColumnDefinitions>
 
         <Grid.RowDefinitions>
             <RowDefinition Height="20" />
-            <RowDefinition Height="auto" />
             <RowDefinition Height="auto" />
             <RowDefinition Height="auto" />
             <RowDefinition Height="auto" />
@@ -55,11 +51,11 @@
 
         <!-- knapper til at oprette og fjerne managers -->
         <Button x:Name="add_manager_button" 
-                Content="+" 
+                Content="Add Manager" 
                 Grid.Column="1" 
                 Grid.Row="5" 
                 Margin="5,5,0,5" 
-                Click="add_manager_button_Click" HorizontalAlignment="Left" Width="13"
+                Click="add_manager_button_Click" HorizontalAlignment="Left"
         />
     </Grid>
 </UserControl>
