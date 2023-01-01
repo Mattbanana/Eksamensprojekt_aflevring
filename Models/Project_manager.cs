@@ -10,6 +10,8 @@ namespace Eksamensprojekt_2nd.Models
 {
     class Project_manager
     {
+        //model class for the project manager that also adds the project manager to the database
+
         string connectionString = "Server=10.56.8.37;Database=DB20;User Id=STUDENT20;Password= OPENDB_20;";
         public int? PK_Project_manager { get; set; }
         public string Name { get; set; }

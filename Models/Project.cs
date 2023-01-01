@@ -11,6 +11,8 @@ namespace Eksamensprojekt_2nd.Models
 {
     public class Project
     {
+        //model class for the project that also adds the project to the database
+        
         string connectionString = "Server=10.56.8.37;Database=DB20;User Id=STUDENT20;Password= OPENDB_20;";
 
         public int? PK_Project { get; set; }
