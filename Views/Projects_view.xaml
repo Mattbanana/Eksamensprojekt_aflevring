@@ -40,26 +40,19 @@
                   Grid.ColumnSpan="3"
                   Grid.RowSpan="3"
                   Margin="20"
-                  SelectionMode="Single" MouseLeftButtonDown="projects_listview_MouseLeftButtonDown"
                   >
-            
+
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <!-- Display the item's name in a TextBlock -->
                     <TextBlock Text="{Binding Project_name}" />
                 </DataTemplate>
             </ListView.ItemTemplate>
-        
+
         </ListView>
 
 
 
-        <!-- Template for the items in the ListView -->
-           
-
-            
-        
-        
         <!-- knapper til at oprette og fjerne projects -->
         <Button x:Name="add_project_button" 
                 Content="+" 

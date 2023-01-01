@@ -28,43 +28,30 @@ namespace Eksamensprojekt_2nd.Views
         public Projects_view()
         {
             InitializeComponent();
-
-
             //CreateProjectTableInDB();
             //List<Project> project_list = Generate_ProjectList_with_Data();
             //WritelistToDB(project_list);
-
-            
 
             List<Project> projects_list = new() ;
             projects_list = Project_repo.GetAllProjectTableDB();
             
             projects_listview.ItemsSource = projects_list;
-
-
-
-
-            ///// //List<Test_Project> Test_projects_list_W_Testdata = GenerateTestDataList();
-            // CreateTestTable();
-            // WriteTestlistToTestDB(Test_projects_list_W_Testdata);
-            // List<Test_Project> Test_projects_list = new List<Test_Project>();
-            //List<Test_Project> Test_projects_list = LoadProjectsFromTestDBtable();
-            //projects_listview.ItemsSource = Test_projects_list;
-
-            //List<Test_Project> projects_list = Projects.LoadProjectsFromDBtable();
-            
         }
 
         public void CreateProjectTableInDB()
         {
             string connectionString = "Server=10.56.8.37;Database=DB20;User Id=STUDENT20;Password= OPENDB_20;";
 
+
+            //try catch
+
+
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
                 string sql = "CREATE TABLE Project_table(" +
                     "PK_project int PRIMARY KEY IDENTITY," +
-                    "FK_project_manager)," +
+                    "FK_project_manager int," +
                     "Name nvarchar(100)," +
                     "Project_ref nvarchar(100)," +
                     "Hours_planed int," +
@@ -76,6 +63,17 @@ namespace Eksamensprojekt_2nd.Views
                 command.ExecuteNonQuery();
 
             }
+
+            
+
+
+
+        }
+
+        private void add_project_button_Click(object sender, RoutedEventArgs e)
+        {
+            Create_project_window create_project_window = new Create_project_window();
+            create_project_window.Show();
         }
 
         public List<Project> Generate_ProjectList_with_Data()
@@ -342,35 +340,6 @@ namespace Eksamensprojekt_2nd.Views
         //    }
         //}
 
-        private void add_project_button_Click(object sender, RoutedEventArgs e)
-        {
-            
-            
-            
-            Create_project_window create_project_window = new Create_project_window();
-            create_project_window.Show();
-        }
-
-        private void projects_listview_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
-        {
-            try
-            {
-                Project selectedItem = (Project)projects_listview.SelectedItem;
-                MessageBox.Show("valg:" + selectedItem);
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("ingen valg");
-                throw;
-            }
-            
-
-            
-            
-            
-            
-            
-        }
     }
 }
 

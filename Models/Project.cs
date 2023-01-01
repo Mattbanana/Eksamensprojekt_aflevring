@@ -14,6 +14,7 @@ namespace Eksamensprojekt_2nd.Models
         string connectionString = "Server=10.56.8.37;Database=DB20;User Id=STUDENT20;Password= OPENDB_20;";
 
         public int? PK_Project { get; set; }
+        public int FK_Project_manager { get; set; }
         public string Project_name { get; set; }
         public string Project_ref { get; set; }
         public int Hours_planed { get; set; }
@@ -35,7 +36,7 @@ namespace Eksamensprojekt_2nd.Models
             this.Comment = _Comment;
         }
         
-        public void GreateProjectInDBTable()
+        public void CreateProjectInDBtable()
         {
             try
             {
@@ -43,13 +44,13 @@ namespace Eksamensprojekt_2nd.Models
                  {
                     connection.Open();
 
-                    string sql = "INSERT INTO Project_table (Name,Project_ID,Hours_planed,Start_date,End_date,Comment) " +
-                        "VALUES (@Project_name,@Project_ID, @Hours_planed, @Start_date, @End_date, @Comment)";
+                    string sql = "INSERT INTO Project_table (Name,Project_ref,Hours_planed,Start_date,End_date,Comment) " +
+                        "VALUES (@Project_name,@Project_ref, @Hours_planed, @Start_date, @End_date, @Comment)";
 
                     SqlCommand command = new SqlCommand(sql, connection);
 
                     command.Parameters.AddWithValue("@Project_name", this.Project_name);
-                    command.Parameters.AddWithValue("@Project_ID", this.Project_ref);
+                    command.Parameters.AddWithValue("@Project_ref", this.Project_ref);
                     command.Parameters.AddWithValue("@hours_planed", this.Hours_planed);
                     command.Parameters.AddWithValue("@Start_date", this.Start_date);
                     command.Parameters.AddWithValue("@End_date", this.End_date);

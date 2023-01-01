@@ -13,67 +13,71 @@ namespace Eksamensprojekt_2nd.Models
     class Project_repo
     {
         string connectionString = "Server=10.56.8.37;Database=DB20;User Id=STUDENT20;Password= OPENDB_20;";
- 
-        public List<Project> CreateProjectList()
-        {
-
-            List<Project> Project_repo = new();
-
-            return Project_repo;
-        }
+   
         
         public static List<Project> GetAllProjectTableDB()
         {
-            
             List<Project> Projects_repo = new();
             string connectionString = "Server=10.56.8.37;Database=DB20;User Id=STUDENT20;Password= OPENDB_20;";
-           
+            
             try
             {
-
-
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
-
                     string sql = "SELECT * FROM Project_table";
+                   
                     using (SqlCommand command = new SqlCommand(sql, connection))
                     {
                         using (SqlDataReader reader = command.ExecuteReader())
                         {
-                                while (reader.Read())
-                                {
+                            while (reader.Read())
+                            {
 
-                                    Project project = new Project(
-                                     reader.GetString(1),
-                                     reader.GetString(2),
-                                     reader.GetInt32(3),
-                                     reader.GetDateTime(4),
-                                     reader.GetDateTime(5),
-                                     reader.GetString(6));
+                                Project project = new Project(
+                                    reader.GetString(2),
+                                    reader.GetString(3),
+                                    reader.GetInt32(4),
+                                    reader.GetDateTime(5),
+                                    reader.GetDateTime(6),
+                                    reader.GetString(7));
  
-                                     Projects_repo.Add(project);
-                                }
-                            
+                                    Projects_repo.Add(project);
+                            } 
                         }
                     }
-                }
-            
-                
-
-                
+                }              
             }
             catch (SqlException ex)
             {
-
                 MessageBox.Show(ex.Message);
-
             }
-
             return Projects_repo;
         }
 
+        void CreateProjectTableInDB()
 
+        {
+            //string connectionString = "Server=10.56.8.37;Database=DB20;User Id=STUDENT20;Password= OPENDB_20;";
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                string sql = "CREATE TABLE Project_table(" +
+                    "PK_projects int PRIMARY KEY IDENTITY," +
+                    "FK_project_manager int," +
+                    "Name nvarchar(100)," +
+                    "Project_ID nvarchar(100)," +
+                    "Hours_planed int," +
+                    "Start_date DateTime," +
+                    "End_date DateTime," +
+                    "Comment nvarchar(1000))";
+
+                SqlCommand command = new SqlCommand(sql, connection);
+                command.ExecuteNonQuery();
+
+            }
+        }
 
 
 
@@ -140,28 +144,7 @@ namespace Eksamensprojekt_2nd.Models
 
         }
 
-        void CreateProjectTableInDB()
-        
-        {
-            //string connectionString = "Server=10.56.8.37;Database=DB20;User Id=STUDENT20;Password= OPENDB_20;";
-
-            using (SqlConnection connection = new SqlConnection(connectionString))
-            {
-                connection.Open();
-                string sql = "CREATE TABLE Project_table(" +
-                    "PK_projects int PRIMARY KEY IDENTITY," +
-                    "Name nvarchar(100)," +
-                    "Project_ID nvarchar(100)," +
-                    "Hours_planed int," +
-                    "Start_date DateTime," +
-                    "End_date DateTime," +
-                    "Comment nvarchar(1000))";
-
-                SqlCommand command = new SqlCommand(sql, connection);
-                command.ExecuteNonQuery();
-
-            }
-        }
+       
 
     }
 }

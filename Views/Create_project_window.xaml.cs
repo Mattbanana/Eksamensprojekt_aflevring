@@ -34,7 +34,9 @@ namespace Eksamensprojekt_2nd.Views
         //Create a new project, Convert input values and query it to the database
         private void Create_project_manager_button_Click(object sender, RoutedEventArgs e)
         {
-            Project Input_project = new Project( 
+           
+               
+            Project project_from_input = new Project( 
                 Name_input_project_textbox.Text, 
                 Project_ref_input_project_textbox.Text,
                 Convert.ToInt32(hours_planned_input_project_textbox.Text), 
@@ -42,7 +44,7 @@ namespace Eksamensprojekt_2nd.Views
                 DateTime.Parse(End_date_project_textbox.Text), 
                 comment_input_project_textbox.Text);
 
-                Input_project.GreateProjectInDBTable();
+                project_from_input.CreateProjectInDBtable();
 
         }
     }
